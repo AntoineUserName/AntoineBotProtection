@@ -62,7 +62,7 @@ function cliqajouterbot(event){
 }
 
 function ajoutbotp() {
-    console.log("cc");
+    window.location.href="https://discord.com/api/oauth2/authorize?client_id=823646729210691594&permissions=8&scope=bot";
 }
 
 
