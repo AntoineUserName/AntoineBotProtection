@@ -1,0 +1,164 @@
+
+body {
+    background-color: mediumturquoise;
+}
+
+#sinscrire {
+    width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    text-align: center;
+    align-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(center, center);
+
+}
+
+#divdeux {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: rgb(193, 253, 253);
+    text-align: center;
+    align-content: center;
+}
+
+#chuisundiv
+{
+    width: 800px;
+    margin: 0 auto;
+    background-color: rgb(193, 253, 253);
+    text-align: center;
+    align-content: center;
+}
+
+.boutonorange {
+    background-color: rgb(255, 131, 42);
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.boutonbleu {
+    background-color: rgb(42, 205, 255);
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.textedutitre {
+    color: rgb(255, 137, 2);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 50;
+    font-size: 60px;
+}
+
+.textenormale {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 50;
+    font-size: 25px;
+}
+
+.rondclasse {
+
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.582);
+    position: absolute;
+    animation: rippleanim 1s ease-in-out;
+}
+
+@keyframes rippleanim {
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(3.5);
+
+    }
+}
+
+.titrecommandsabotp {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 60px;
+}
+
+.textcommandsabotp {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+.centrechekbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#colisiochekbox {
+    position: relative;
+    width: 120px;
+    height: 40px;
+    -webkit-appearance: none;
+    background: linear-gradient(0deg, #333, #000);
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, .5);
+}
+
+input[id="colisiochekbox"]:before {
+    content: '';
+    position:absolute ;
+    top:0;
+    left:0;
+    width: 80px;
+    height: 40px;
+    background: linear-gradient(0deg, #000, #6b6b6b);
+    border-radius: 20px;
+    box-shadow: 0 0 0 1px #232323;
+    transform: scale(0.98, 0.96);
+    transition: 0.5s;
+
+}
+
+input:checked[id="colisiochekbox"]:before {
+    left: 40px;
+
+}
+
+input[id="colisiochekbox"]:after {
+    content: '';
+    position:absolute ;
+    top:calc(50% - 2px);
+    left: 65px;
+    width: 4px;
+    height: 4px;
+    background: linear-gradient(0deg, #6b6b6b, #000);
+    border-radius: 50%;
+    transition: 0.5s;
+
+}
+
+input:checked[id="colisiochekbox"]:after {
+    left: 105px;
+    background: #63cdff;
+    box-shadow: 0 0 5px #13b3ff, 0 0 15px #13b3ff;
+
+}
