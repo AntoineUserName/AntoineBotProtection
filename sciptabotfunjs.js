@@ -1,7 +1,11 @@
 console.log("start");
 const boutonsoranges = document.querySelectorAll("button");
+document.getElementById("chuisundiv").style.backgroundColor = "rgb(193, 253, 253)";
+document.querySelector("body").style.backgroundColor = "mediumturquoise";
+document.querySelector("body").style.color = "black";
+var themchoisi = false;
 
-//detectionclique
+//detectioncliqueboutons
 
 boutonsoranges.forEach(button => {
     if(button.id == "seecomandbuton"){
@@ -14,6 +18,23 @@ boutonsoranges.forEach(button => {
     button.addEventListener("click", cliqproposajout);
     }
 });
+
+
+//changerletheme
+
+function onchangdethem() {
+if(themchoisi == true) {
+    document.getElementById("chuisundiv").style.backgroundColor = "rgb(193, 253, 253)";
+    document.querySelector("body").style.backgroundColor = "mediumturquoise";
+    document.querySelector("body").style.color = "black";
+    themchoisi = false;
+} else {if(themchoisi == false) {   
+    document.getElementById("chuisundiv").style.backgroundColor = "rgb(30, 85, 85)";
+    document.querySelector("body").style.backgroundColor = "rgb(41, 41, 41)";
+    document.querySelector("body").style.color = "white";
+    themchoisi = true;
+}}
+}
 
 //allerausitepourlescommandes
 
