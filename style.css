@@ -1,9 +1,4 @@
-
-body {
-    background-color: mediumturquoise;
-}
-
-#sinscrire {
+#changedetheme {
     width: 900px;
     margin: 0 auto;
     background-color: white;
@@ -27,7 +22,6 @@ body {
 {
     width: 800px;
     margin: 0 auto;
-    background-color: rgb(193, 253, 253);
     text-align: center;
     align-content: center;
 }
@@ -112,7 +106,7 @@ body {
 
 }
 
-#colisiochekbox {
+input[id="colisiochekbox"] {
     position: relative;
     width: 120px;
     height: 40px;
@@ -134,7 +128,7 @@ input[id="colisiochekbox"]:before {
     border-radius: 20px;
     box-shadow: 0 0 0 1px #232323;
     transform: scale(0.98, 0.96);
-    transition: 0.5s;
+    transition: 0.3s;
 
 }
 
@@ -152,7 +146,7 @@ input[id="colisiochekbox"]:after {
     height: 4px;
     background: linear-gradient(0deg, #6b6b6b, #000);
     border-radius: 50%;
-    transition: 0.5s;
+    transition: 0.3s;
 
 }
 
@@ -161,4 +155,8 @@ input:checked[id="colisiochekbox"]:after {
     background: #63cdff;
     box-shadow: 0 0 5px #13b3ff, 0 0 15px #13b3ff;
 
+}
+
+input:checked[id="colisiochekbox"] {
+    background: linear-gradient(0deg, #6dd1ff, #20b7ff);
 }
