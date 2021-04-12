@@ -3,7 +3,7 @@ const boutonsoranges = document.querySelectorAll("button");
 document.getElementById("chuisundiv").style.backgroundColor = "rgb(193, 253, 253)";
 document.querySelector("body").style.backgroundColor = "mediumturquoise";
 document.querySelector("body").style.color = "black";
-var themchoisi = false;
+var themactuel = true;
 
 //detectioncliqueboutons
 
@@ -23,17 +23,17 @@ boutonsoranges.forEach(button => {
 //changerletheme
 
 function onchangdethem() {
-if(themchoisi == true) {
+if(themactuel == false) {
     document.getElementById("chuisundiv").style.backgroundColor = "rgb(193, 253, 253)";
     document.querySelector("body").style.backgroundColor = "mediumturquoise";
     document.querySelector("body").style.color = "black";
-    themchoisi = false;
-} else {if(themchoisi == false) {   
+    themactuel = true;
+} else {
     document.getElementById("chuisundiv").style.backgroundColor = "rgb(30, 85, 85)";
     document.querySelector("body").style.backgroundColor = "rgb(41, 41, 41)";
     document.querySelector("body").style.color = "white";
-    themchoisi = true;
-}}
+    themactuel = false;
+}
 }
 
 //allerausitepourlescommandes
@@ -49,7 +49,13 @@ function cliquecommandes(event){
 }
 
 function vaslistecommand() {
-    window.open("pagecommandabotp.html");
+    if(themactuel == true){
+        window.open("pagecommandabotp.html");
+    
+    } else {
+            window.open("pagecommandabotpdark.html");
+            
+        }
 }
 
 
@@ -100,5 +106,11 @@ function cliqproposajout(event) {
 }
 
 function vasproposajout() {
+if(themactuel == true){
     window.open("pageproposajout.html");
+
+} else {
+        window.open("pageproposajoutdark.html");
+        
+    }
 }
